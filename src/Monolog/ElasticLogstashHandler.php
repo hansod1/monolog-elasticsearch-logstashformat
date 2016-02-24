@@ -34,7 +34,6 @@ class ElasticLogstashHandler extends \Monolog\Handler\AbstractProcessingHandler
                 [
                     'index' => $this->options['index'],
                     'type' => $this->options['type'],
-                    'timeout' => '50s',
                     'body' => json_decode($record['formatted'], true)
                 ]
             );
